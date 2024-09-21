@@ -1,0 +1,10 @@
+- Go to the Spotify Developer Dashboard and log in.
+- Create a new application.
+- Set the Redirect URI to http://localhost:8888/callback in your app settings. Can change port (i.e. 8080, 8050, etc.,)
+- Note down your Client ID and Client Secret.
+- Update Spotify credentials:
+  CLIENT_ID = "your_client_id_here"
+  CLIENT_SECRET = "your_client_secret_here"
+- The first time you run the app, a web browser for Spotify OAuth will open asking for permission.
+
+   *Some API calls may require Spotify Premium.
