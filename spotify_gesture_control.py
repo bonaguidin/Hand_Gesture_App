@@ -59,13 +59,13 @@ def refresh_spotify_token():
         open_browser=True
     ))
 
+# OPTIONAL, can remove if wanted
 def wait_before_start():
     print("Preparing to start hand gesture recognition...")
     for i in range(2, 0, -1):
         print(f"Starting in {i} seconds...")
         time.sleep(1)
     print("Starting hand gesture recognition now!")
-
 
 def open_spotify():
     global action_text
@@ -93,7 +93,6 @@ def open_spotify():
 
 def close_spotify():
     os.system("taskkill /F /IM Spotify.exe")
-
 
 def execute_spotify_command(gesture):
     global action_text, last_spotify_open_time, last_gesture, last_gesture_time
@@ -137,7 +136,6 @@ def execute_spotify_command(gesture):
     except SpotifyException as e:
         print(f"Spotify error: {e}")
 
-
 def get_active_device():
     try:
         devices = sp.devices()
@@ -147,7 +145,7 @@ def get_active_device():
         print(f"Error getting active device: {e}")
         return None
 
-
+# Spotify will return an error if it cannot find an open device. Can be Desktop Version or Webplayer
 def ensure_device_is_active():
     device_id = get_active_device()
     if not device_id:
@@ -164,6 +162,7 @@ def ensure_device_is_active():
             print(f"Error activating device: {e}")
     return device_id
 
+# Function to ensure there are not unwanted repeat action. Adjust as desired
 def execute_command_with_delay(action):
     def delayed_execution():
         time.sleep(2)
@@ -184,7 +183,7 @@ def calculate_finger_angles(landmarks):
         finger_angles.append(angle)
     return finger_angles
 
-
+# Hand gesture recognition. Change if you would like to add/adjust hands signs
 def recognize_gesture(landmarks):
     def is_finger_extended(finger_tip, finger_pip, wrist):
         return landmarks[finger_tip].y < landmarks[finger_pip].y < landmarks[wrist].y
