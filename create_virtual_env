@@ -1,0 +1,7 @@
+# Create Virtual Enviroment (Windows)
+python -m venv myenv #Change 'myenv' to desired name
+myenv\Scripts\activate
+
+# Create Virtual Enviroment (macOS)
+python -m venv myenv #Change 'myenv' to desired name
+source myenv/bin/activate
