@@ -5,3 +5,6 @@ myenv\Scripts\activate
 # Create Virtual Enviroment (macOS)
 python -m venv myenv #Change 'myenv' to desired name
 source myenv/bin/activate
+
+# Download Required Libraries
+pip install opencv-python numpy pyautogui mediapipe spotipy requests
