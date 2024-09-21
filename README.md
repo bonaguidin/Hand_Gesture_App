@@ -1,6 +1,8 @@
 # Hand_Gesture_App
 A hand gesture recognition app using Mediapipe by Google and Spotify API. Please follow the steps in listed order for easiest implementation and read entire README file. Feel free to reach out via email or LinkedIn if you have any problems with the app! 
 
+REFER TO GestureGuide FOR PNGs OF THE DIFFERENT HAND GESTURE CONTROLS
+
 ## Additional Notes
 - Some functions of the API may require Spotify Premium. 
 - Ensure you set up your Spotify Dev Application to obtain your CLIENT_ID and CLIENT_SECRET. 
