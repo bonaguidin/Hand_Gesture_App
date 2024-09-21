@@ -9,3 +9,4 @@ A hand gesture recognition app using Mediapipe by Google and Spotify API.
 - Press 'q' in the OpenCV window to close the program. (or CTRL+C in your IDE terminal)
 
 ## AUTHOR: Noah Bonaguidi
+#### Contact: bonaguidin@gmail.com
